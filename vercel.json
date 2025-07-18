@@ -1,29 +1,13 @@
 {
-  "version": 2,
   "functions": {
-    "api/*.js": {
-      "runtime": "@vercel/node@3.0.7"
+    "api/contact.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/test-email.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/health.js": {
+      "runtime": "@vercel/node"
     }
-  },
-  "routes": [
-    {
-      "src": "/api/contact",
-      "dest": "/api/contact.js"
-    },
-    {
-      "src": "/api/test-email",
-      "dest": "/api/test-email.js"
-    },
-    {
-      "src": "/api/health",
-      "dest": "/api/health.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
   }
 }
