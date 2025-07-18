@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aran Pony Trap Tours | Authentic Inis Mór Island Adventures</title>
+    <meta
+      name="description"
+      content="Experience the traditional way to explore Inis Mór with Thomas Faherty's authentic pony and trap tours. Book your unforgettable Aran Islands adventure today."
+    />
+
+    <!-- SEO and Social Meta Tags -->
+    <meta
+      property="og:title"
+      content="Aran Pony Trap Tours - Authentic Inis Mór Adventures"
+    />
+    <meta
+      property="og:description"
+      content="Traditional pony and trap tours around beautiful Inis Mór island"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <a href="#" class="logo">🐴 Aran Pony Trap</a>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#book" class="book-now-btn">Book Now</a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Experience Inis Mór the Traditional Way</h1>
+        <p>
+          Journey through ancient landscapes with authentic pony and trap tours
+          around Ireland's most spectacular island
+        </p>
+        <div class="cta-buttons">
+          <a href="#book" class="btn-primary">Book Your Adventure</a>
+          <a href="#tours" class="btn-secondary">Explore Tours</a>
+        </div>
+      </div>
+
+      <!-- Search Widget -->
+      <div class="search-widget">
+        <div class="search-field">
+          <label for="tour-date">Select Date</label>
+          <input type="date" id="tour-date" name="tour-date" />
+        </div>
+        <div class="search-field">
+          <label for="tour-type">Tour Type</label>
+          <select id="tour-type" name="tour-type">
+            <option>Classic Island Tour</option>
+            <option>Photography Tour</option>
+            <option>Historical Tour</option>
+            <option>Custom Private Tour</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3-4 Guests</option>
+            <option>5+ Guests</option>
+          </select>
+        </div>
+        <button class="btn-primary" onclick="checkAvailability()">
+          Check Availability
+        </button>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+      <div class="trust-container">
+        <div class="trust-item fade-in">
+          <div class="trust-icon">⭐</div>
+          <div class="trust-number">4.9</div>
+          <p>Average Rating</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">👥</div>
+          <div class="trust-number">500+</div>
+          <p>Happy Travelers</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">🏆</div>
+          <div class="trust-number">25+</div>
+          <p>Years Experience</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">🌿</div>
+          <div class="trust-number">100%</div>
+          <p>Eco-Friendly</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="tours-section">
+      <h2 class="section-title fade-in">Our Signature Tours</h2>
+      <div class="tours-grid">
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Classic Inis Mór Tour</h3>
+            <p class="tour-description">
+              Discover the island's most iconic landmarks including Dún Aonghasa
+              fort, ancient churches, and traditional stone walls with our
+              knowledgeable local guides.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€35/person</span>
+              <span class="tour-duration">3 hours</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Photography Adventure</h3>
+            <p class="tour-description">
+              Perfect for capturing stunning landscapes. We'll take you to the
+              best viewpoints during golden hour for those Instagram-worthy
+              shots.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€45/person</span>
+              <span class="tour-duration">4 hours</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Historical Journey</h3>
+            <p class="tour-description">
+              Dive deep into Inis Mór's fascinating past with stories of ancient
+              Celtic culture, medieval churches, and local legends passed down
+              through generations.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€40/person</span>
+              <span class="tour-duration">3.5 hours</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Family Adventure</h3>
+            <p class="tour-description">
+              A shorter, family-friendly route designed for children and elderly
+              guests. Gentle pace with plenty of stops for photos and rest.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€30/person</span>
+              <span class="tour-duration">2.5 hours</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Private Custom Tour</h3>
+            <p class="tour-description">
+              Design your own adventure! Choose your stops, pace, and duration.
+              Perfect for special occasions or unique interests.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€120/group</span>
+              <span class="tour-duration">Flexible</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-image"></div>
+          <div class="tour-content">
+            <h3 class="tour-title">Sunset Special</h3>
+            <p class="tour-description">
+              Experience the magic of an Aran sunset from the best viewpoints on
+              the island. Includes traditional Irish storytelling around the
+              fire.
+            </p>
+            <div class="tour-details">
+              <span class="tour-price">€50/person</span>
+              <span class="tour-duration">3 hours</span>
+            </div>
+            <button class="btn-primary">Book This Tour</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-text fade-in">
+          <h2>The Faherty Family Tradition</h2>
+          <p>
+            For over 25 years, the Faherty family has been sharing the magic of
+            Inis Mór with visitors from around the world. Our traditional pony
+            and trap tours offer an authentic way to experience Ireland's
+            largest Aran Island.
+          </p>
+          <p>
+            We pride ourselves on providing not just transportation, but a
+            genuine connection to the island's culture, history, and natural
+            beauty. Our horses are well-cared for and our guides are locals who
+            have grown up on these ancient stone walls and windswept cliffs.
+          </p>
+          <p>
+            Choose us for an authentic, eco-friendly adventure that supports
+            local traditions and helps preserve the unique character of Inis Mór
+            for future generations.
+          </p>
+          <a href="#contact" class="btn-primary">Learn More About Us</a>
+        </div>
+        <div class="about-image fade-in"></div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="reviews-container">
+        <h2 class="section-title fade-in">What Our Guests Say</h2>
+        <div class="reviews-grid">
+          <div class="review-card fade-in">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">
+              "Absolutely magical experience! Thomas was incredibly
+              knowledgeable and the pony and trap gave us a unique perspective
+              of the island that we couldn't have gotten any other way."
+            </p>
+            <p class="reviewer-name">- Sarah & Mike, Dublin</p>
+          </div>
+          <div class="review-card fade-in">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">
+              "Perfect for our family with young children. The horses were
+              gentle and the pace was just right. Our guide shared wonderful
+              stories about island life."
+            </p>
+            <p class="reviewer-name">- The Johnson Family, UK</p>
+          </div>
+          <div class="review-card fade-in">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">
+              "As a photographer, this tour gave me access to incredible
+              viewpoints and our guide knew exactly when the lighting would be
+              perfect. Highly recommend!"
+            </p>
+            <p class="reviewer-name">- Emma, Germany</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="book" class="contact-section">
+      <div class="contact-container">
+        <h2 class="section-title fade-in">Book Your Adventure</h2>
+        <p class="contact-subtitle fade-in">Ready to experience Inis Mór the traditional way? Get in touch to book your pony and trap tour!</p>
+        
+        <div class="contact-content">
+          <div class="contact-form-container fade-in">
+            <form class="contact-form" onsubmit="submitContactForm(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name *</label>
+                  <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" name="last-name" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="preferred-date">Preferred Date *</label>
+                  <input type="date" id="preferred-date" name="preferred-date" required>
+                </div>
+                <div class="form-group">
+                  <label for="group-size">Group Size *</label>
+                  <select id="group-size" name="group-size" required>
+                    <option value="">Select group size</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6+">6+ People</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="tour-preference">Preferred Tour</label>
+                <select id="tour-preference" name="tour-preference">
+                  <option value="">Select a tour (optional)</option>
+                  <option value="classic">Classic Inis Mór Tour</option>
+                  <option value="photography">Photography Adventure</option>
+                  <option value="historical">Historical Journey</option>
+                  <option value="family">Family Adventure</option>
+                  <option value="private">Private Custom Tour</option>
+                  <option value="sunset">Sunset Special</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="special-requirements">Special Requirements or Questions</label>
+                <textarea id="special-requirements" name="special-requirements" rows="4" placeholder="Tell us about any special needs, dietary requirements, accessibility needs, or questions you have..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary btn-full-width">Send Inquiry</button>
+            </form>
+          </div>
+          
+          <div class="contact-info fade-in">
+            <div class="contact-card">
+              <h3>📞 Call Us Directly</h3>
+              <p>+353 99 61234</p>
+              <p>Daily 9:00 AM - 6:00 PM</p>
+            </div>
+            
+            <div class="contact-card">
+              <h3>📧 Email Us</h3>
+              <p>info@aranponytrap.com</p>
+              <p>We respond within 24 hours</p>
+            </div>
+            
+            <div class="contact-card">
+              <h3>📍 Find Us</h3>
+              <p>Kilronan Pier</p>
+              <p>Inis Mór, Aran Islands</p>
+            </div>
+            
+            <div class="contact-card">
+              <h3>⚡ Quick Booking</h3>
+              <p>Same-day tours available</p>
+              <p>Subject to availability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 +353 99 61234</p>
+          <p>📧 info@aranponytrap.com</p>
+          <p>📍 Kilronan, Inis Mór, Aran Islands</p>
+          <p>🕒 Daily 9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <p><a href="#tours">Our Tours</a></p>
+          <p><a href="#about">About Us</a></p>
+          <p><a href="#reviews">Reviews</a></p>
+          <p><a href="#book">Book Now</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Tour Information</h3>
+          <p><a href="#">Booking Terms</a></p>
+          <p><a href="#">Weather Policy</a></p>
+          <p><a href="#">Group Discounts</a></p>
+          <p><a href="#">Gift Vouchers</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">TripAdvisor</a></p>
+          <p><a href="#">Google Reviews</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Aran Pony Trap Tours. All rights reserved. | Designed with
+          ❤️ for Inis Mór
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
